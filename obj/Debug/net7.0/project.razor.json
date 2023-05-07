@@ -18645,8 +18645,23 @@
   "RootNamespace": "Final_Project",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\jlhel\\OneDrive\\Desktop\\Final_Project\\Final_Project\\Pages\\Books\\Edit.cshtml",
+      "TargetPath": "Pages\\Books\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jlhel\\OneDrive\\Desktop\\Final_Project\\Final_Project\\Pages\\Books\\Create.cshtml",
+      "TargetPath": "Pages\\Books\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\jlhel\\OneDrive\\Desktop\\Final_Project\\Final_Project\\Pages\\Shared\\_Layout.cshtml",
       "TargetPath": "Pages\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jlhel\\OneDrive\\Desktop\\Final_Project\\Final_Project\\Pages\\Books\\Details.cshtml",
+      "TargetPath": "Pages\\Books\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18665,8 +18680,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\jlhel\\OneDrive\\Desktop\\Final_Project\\Final_Project\\Pages\\Books\\Delete.cshtml",
+      "TargetPath": "Pages\\Books\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\jlhel\\OneDrive\\Desktop\\Final_Project\\Final_Project\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jlhel\\OneDrive\\Desktop\\Final_Project\\Final_Project\\Pages\\Books\\Index.cshtml",
+      "TargetPath": "Pages\\Books\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
