@@ -18680,6 +18680,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\jlhel\\OneDrive\\Desktop\\Final_Project\\Final_Project\\Pages\\User.cshtml",
+      "TargetPath": "Pages\\User.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\jlhel\\OneDrive\\Desktop\\Final_Project\\Final_Project\\Pages\\Books\\Delete.cshtml",
       "TargetPath": "Pages\\Books\\Delete.cshtml",
       "FileKind": "mvc"

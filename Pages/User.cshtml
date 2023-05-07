@@ -1,0 +1,62 @@
+@page
+@model UserModel
+@{
+    ViewData["Title"] = "Members";
+}
+
+<!-- Step 9: Create form with bootstrap style HTML -->
+<div class="container">
+    <h3>Members</h3>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div class="form-group">
+                    <label asp-for="User.UserId" class="form-label">Select Member</label>
+                    <select asp-for="User.UserId" asp-items="Model.UserDropDown" class="form-select">
+                        <option value="">-- Select Member --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr />
+
+    <!-- Extra credit step 10. Display the selected professor -->
+    @if (Model.User != null)
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Selected Member:</h5>
+                        <p class="card-text">
+                            <strong>Name:</strong> @Model.User.FirstName @Model.User.LastName <br />
+                            <strong>Email:</strong> @Model.User.Email <br />
+                            <strong>Biography:</strong> @Model.User.Biography <br />
+                            <strong>Books:</strong>
+                            <ul>
+                                @if (Model.User.UserBooks != null && Model.User.UserBooks.Count > 0)
+                                {
+                                    foreach (var book in Model.User.UserBooks)
+                                    {
+                                        <li>@book.Book.Title - @book.Book.Author</li>
+                                    }
+                                }
+                                else
+                                {
+                                    <li>No Books to Display</li>
+                                }
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
