@@ -5,15 +5,13 @@ namespace Final_Project.Pages;
 
 public class IndexModel : PageModel
 {
-    private readonly ILogger<IndexModel> _logger;
+    public IActionResult OnPostGoToUsers()
+        {
+            return RedirectToPage("User");
+        }
 
-    public IndexModel(ILogger<IndexModel> logger)
-    {
-        _logger = logger;
+        public IActionResult OnPostGoToBooks()
+        {
+            return RedirectToPage("/Books/Index");
+        }
     }
-
-    public void OnGet()
-    {
-
-    }
-}

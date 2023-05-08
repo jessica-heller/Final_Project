@@ -33,7 +33,7 @@ namespace Final_Project.Models
                     
                 
                     new User {FirstName="Jennifer", LastName="Torres",
-                    Biography ="Hi, I'm Lily. I'm a big fan of romance novels and enjoy discussing the latest plot twists and character developments with my book club friends. When I'm not reading, I enjoy writing my own romance stories and spending time with my family and pets. I work as a marketing manager and love using my creativity to come up with new ideas.",
+                    Biography ="Hi, I'm Jennifer. I'm a big fan of romance novels and enjoy discussing the latest plot twists and character developments with my book club friends. When I'm not reading, I enjoy writing my own romance stories and spending time with my family and pets. I work as a marketing manager and love using my creativity to come up with new ideas.",
                     Email = "jennifertorres@icloud.com"},
                     
                     new User {FirstName="Cindy", LastName="Gates",
