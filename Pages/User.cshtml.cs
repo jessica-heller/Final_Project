@@ -13,10 +13,8 @@ public class UserModel : PageModel
     public List<User> Users {get; set;} = default!;
     public SelectList UserDropDown {get; set;} = default!;
 
-    // Extra Credit Step 1: We need a professor property
-    // User will select which professor they want, so this must use BindProperty
     [BindProperty]
-    public User User {get; set;} = default!;
+    public new User User {get; set;} = default!;
 
     public UserModel (ProjectDbContext context, ILogger<UserModel> logger)
     {
