@@ -33,6 +33,6 @@ public class UserModel : PageModel
        
         User = _context.User.Include(u => u.UserBooks).ThenInclude(ub => ub.Book).Where(u => u.UserId == User.UserId).First();
         Users = _context.User.ToList();
-        UserDropDown = new SelectList(Users, "UserId", "FirstName", "LastName");
+        UserDropDown = new SelectList(Users, "UserId", "FirstName");
     }
 }

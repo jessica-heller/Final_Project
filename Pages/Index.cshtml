@@ -1,37 +1,65 @@
-﻿@page
+@page
 @model IndexModel
 @{
     ViewData["Title"] = "Home";
 }
+<style>
+    .gap{
+        margin-bottom: 20px;
+    }
+
+    body{
+        background-color: #F5F5F5;
+    }
+
+    .container{
+        background-color: #F0F8FF;
+    }
+</style>
 
 <h3>Welcome to the Book Nook!</h3>
-<p class ="card-title">A platform designed for book lovers to connect with one another and stay updated on the best and latest novels. </p>
+<p class="card-title">A platform designed for book lovers to connect with one another and stay updated on the best and latest novels!</p>
+
 <hr />
 
-<div class="row">
-    <div class="col-md-6">
+<div class="row gap">
+    <div class="col-4">
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Members</h5>
-                <p class="card-text">Browse members</p>
+                <p class="card-text">Browse Members</p>
                 <form method="post">
                     <button type="submit" asp-page-handler="GoToUsers" class="btn btn-primary">Go to Members</button>
                 </form>
             </div>
         </div>
+        </div>
+        </div>
+
+
+        <div class="row gap">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Books</h5>
+                    <p class="card-text">Browse and Manage Books</p>
+                    <form method="post">
+                        <button type="submit" asp-page-handler="GoToBooks" class="btn btn-primary">Go to Books</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-6">
+
+
+    <div class="row gap">
+    <div class="col-4">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Books</h5>
-                <p class="card-text">Browse and manage books</p>
-                <form method="post">
-                    <button type="submit" asp-page-handler="GoToBooks" class="btn btn-primary">Go to Books</button>
-                </form>
+                <h5 class="card-title">Become a Member</h5>
+                <p class="card-text">Join the Book Nook Today!</p>
+                <a asp-page="/CreateUser" class="btn btn-primary">Create New User</a>
             </div>
         </div>
     </div>
 </div>
-
-
-

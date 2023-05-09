@@ -18660,6 +18660,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\jlhel\\OneDrive\\Desktop\\Final_Project\\Final_Project\\Pages\\CreateUser.cshtml",
+      "TargetPath": "Pages\\CreateUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\jlhel\\OneDrive\\Desktop\\Final_Project\\Final_Project\\Pages\\Books\\Create.cshtml",
       "TargetPath": "Pages\\Books\\Create.cshtml",
       "FileKind": "mvc"
