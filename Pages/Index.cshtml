@@ -4,6 +4,35 @@
     ViewData["Title"] = "Home";
 }
 <style>
+    .jumbotron {
+        background-color: #f8f8f8;
+        padding: 30px;
+    }
+
+    .jumbotron h1{
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .jumbotron p{
+        font-size: 18px;
+        color: #555;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-title{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .card-text{
+        font-size: 16px;
+        color: #777;
+    }
+
     .gap{
         margin-bottom: 20px;
     }
@@ -15,11 +44,13 @@
     .container{
         background-color: #F0F8FF;
     }
+    
 </style>
-
+<div class="jumbotron">
 <h3>Welcome to the Book Nook!</h3>
-<p class="card-title">A platform designed for book lovers to connect with one another and stay updated on the best and latest novels!</p>
-
+<p>A platform designed for book lovers to connect with one another and stay updated on the best and latest novels!</p>
+<p>Explore our features:</p>
+</div>
 <hr />
 
 <div class="row gap">
@@ -27,7 +58,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Members</h5>
-                <p class="card-text">Browse Members</p>
+                <p class="card-text">Browse Members and connect with fellow book enthusiasts.</p>
                 <form method="post">
                     <button type="submit" asp-page-handler="GoToUsers" class="btn btn-primary">Go to Members</button>
                 </form>
@@ -42,7 +73,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Books</h5>
-                    <p class="card-text">Browse and Manage Books</p>
+                    <p class="card-text">Discover and manage a wide collection of books from various genres.</p>
                     <form method="post">
                         <button type="submit" asp-page-handler="GoToBooks" class="btn btn-primary">Go to Books</button>
                     </form>
@@ -57,8 +88,8 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Become a Member</h5>
-                <p class="card-text">Join the Book Nook Today!</p>
-                <a asp-page="/CreateUser" class="btn btn-primary">Create New User</a>
+                <p class="card-text">Join the Book Nook community and start sharing your favorite books.</p>
+                <a asp-page="/CreateUser" class="btn btn-primary">Create Account</a>
             </div>
         </div>
     </div>
