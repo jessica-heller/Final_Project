@@ -5,6 +5,39 @@
 }
 
 <style>
+    .jumbotron {
+        background-color: #f8f8f8;
+        padding: 30px;
+    }
+
+    .jumbotron h1{
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .jumbotron p{
+        font-size: 18px;
+        color: #555;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-title{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .card-text{
+        font-size: 16px;
+        color: #777;
+    }
+
+    .gap{
+        margin-bottom: 20px;
+    }
+
     body{
         background-color: #F5F5F5;
     }
@@ -13,28 +46,44 @@
         background-color: #F0F8FF;
     }
 </style>
-
-<h1>Become a Member:</h1>
-
+<div class="jumbotron">
+<h2>Become a Member of the Book Nook!</h2>
+    <a asp-page="/Index" class="btn btn-secondary">Home</a>
+</div>
 <hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <p>Welcome to the Book Nook, a vibrant community for book lovers like you! By becoming a member, you'll gain access to a world of exciting features and benefits.</p>
+        <p>As a member of the Book Nook, you can:</p>
+        <ul>
+            <li>Connect with fellow book enthusiasts and expand your literary network.</li>
+            <li>Browse new and popular books across various genres.</li>
+            <li>Share your own book recommendations.</li>
+            </ul>
+            <p>Don't miss out on the incredible opportunities and experiences that await you. Join our community of avid readers by signing up for a free membership today!</p>
+            <p>To become a member, simply fill out the registration form below and start your Book Nook journey.</p>
+        </ul>
+    </div>
+</div>
 
 <div class="container">
     <form method ="post">
         <div class="form-group">
             <label asp-for="FirstName" class="control-label">First Name</label>
-            <input asp-for="FirstName" class="form-control" />
+            <input asp-for="FirstName" class="form-control"  style="width:250px"/>
             <span asp-validation-for="FirstName" class="text-danger"></span>
         </div>
 
         <div class="form-group">
             <label asp-for="LastName" class="control-label">Last Name</label>
-            <input asp-for="LastName" class="form-control" />
+            <input asp-for="LastName" class="form-control" style="width:250px"/>
             <span asp-validation-for="LastName" class="text-danger"></span>
         </div>
 
         <div class="form-group">
         <label asp-for="Email" class="control-label">Email</label>
-        <input asp-for="Email" class="form-control" />
+        <input asp-for="Email" class="form-control" style="width:250px"/>
         <span asp-validation-for="Email" class="text-danger"></span>
         </div>
         

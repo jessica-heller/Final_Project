@@ -5,6 +5,39 @@
 }
 
 <style>
+    .jumbotron {
+        background-color: #f8f8f8;
+        padding: 30px;
+    }
+
+    .jumbotron h1{
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .jumbotron p{
+        font-size: 18px;
+        color: #555;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-title{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .card-text{
+        font-size: 16px;
+        color: #777;
+    }
+
+    .gap{
+        margin-bottom: 20px;
+    }
+
     body{
         background-color: #F5F5F5;
     }
@@ -12,22 +45,31 @@
     .container{
         background-color: #F0F8FF;
     }
+
 </style>
 
-<div class="container">
-    <h3>The Book Nook</h3>
+<div class="jumbotron">
+    <h1>The Book Nook</h1>
+    <a asp-page="/Index" class="btn btn-secondary">Home</a>
     <hr />
+    </div>
+    <div class="row">
+    <div class="col-md-6">
+        <h2>Meet our Amazing Community Members!</h2>
+        <p></p>
+        <p>Discover the fascinating individuals who make up the Book Nook community. Each member brings their unique perspective and love for books, creating a diverse and engaging literary environment.</p>
+    </div>
+</div>
     <div class="row">
         <div class="col-md-4">
             <form method="post">
                 <div class="form-group">
-                    <label asp-for="User.UserId" class="form-label">Select Member</label>
-                    <select asp-for="User.UserId" asp-items="Model.UserDropDown" class="form-select">
-                    <option value="">--Select Member--</option>
+                    <select asp-for="User.UserId" asp-items="Model.UserDropDown" class="form-select" placeholder="--Select Member--">
+                        <option value="">--Select Member--</option>
                     </select>
-                </div>
+        </div>
                 <div class="form-group">
-                    <input type="submit" value="Submit" class="btn btn-primary" />
+                    <input type="submit" value="Submit" class="btn btn-secondary" />
                 </div>
             </form>
         </div>

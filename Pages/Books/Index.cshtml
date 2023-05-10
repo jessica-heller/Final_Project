@@ -6,6 +6,39 @@
 }
 
 <style>
+    .jumbotron {
+        background-color: #f8f8f8;
+        padding: 30px;
+    }
+
+    .jumbotron h1{
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .jumbotron p{
+        font-size: 18px;
+        color: #555;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-title{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .card-text{
+        font-size: 16px;
+        color: #777;
+    }
+
+    .gap{
+        margin-bottom: 20px;
+    }
+
     body{
         background-color: #F5F5F5;
     }
@@ -13,13 +46,16 @@
     .container{
         background-color: #F0F8FF;
     }
+
 </style>
+<div class="jumbotron">
+<h2>Recommended Novels</h2>
+    <div class="button-container">
+        <a asp-page="/Index" class="btn btn-secondary">Home</a>
+        <a asp-page="Create" class="btn btn-secondary">Create New</a>
+    </div>
+    </div>
 
-<h1>Books</h1>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
