@@ -27,10 +27,19 @@ namespace Final_Project.Pages.Books
         [BindProperty(SupportsGet = true)]
         public string CurrentSort {get; set;}
 
+        [BindProperty(SupportsGet = true)]
+        public string SearchString {get; set;}
+        public bool IsNextButtonDisabled {get; set;}
+
 
         public async Task OnGetAsync()
         {
-            var query = _context.Book.Select(b => b);
+            var query = _context.Book.AsQueryable();
+
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                query = query.Where(b => b.Title.Contains(SearchString));
+            }
 
             switch (CurrentSort)
             {
@@ -40,11 +49,14 @@ namespace Final_Project.Pages.Books
                 case "first_desc":
                     query = query.OrderBy(b => b.Title);
                     break;
+                default:
+                    query = query.OrderBy(b => b.Title);
+                    break;
             }
-            if (_context.Book != null)
-            {
+    
                 Book = await query.Skip((PageNum-1)*PageSize).Take(PageSize).ToListAsync();
+
+                IsNextButtonDisabled = !(await query.Skip(PageNum * PageSize).AnyAsync());
         }
     }
-}
 }

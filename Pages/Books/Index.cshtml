@@ -58,7 +58,7 @@
 
     <div class="row">
         <div class="col-md-6">
-            <form method="get" action=".Index">
+            <form method="get" action="../Books/Index">
                 <div class="input-group mb-3">
                     <input type="text" name="searchString" class="form-control" placeholder="Search books...">
                     <div class="input-group-append">
@@ -142,11 +142,12 @@
     <ul class="pagination">
         @{
             var prevDisabled = Model.PageNum <= 1? "disabled" : "";
+            var nextDisabled = Model.IsNextButtonDisabled ? "disabled" : "";
         }
         <li class="page-item @prevDisabled">
             <a class="page-link" asp-page="./Index" asp-route-PageNum="@(Model.PageNum -1)" asp-route-CurrentSort="@Model.CurrentSort">Previous</a>
         </li>
-        <li class="page-item">
+        <li class="page-item @nextDisabled">
             <a class="page-link" asp-page="./Index" asp-route-PageNum="@(Model.PageNum + 1)" asp-route-CurrentSort="@Model.CurrentSort">Next</a>
         </li>
     </ul>
